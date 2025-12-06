@@ -1,80 +1,132 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/*
+ * style.css
+ * Estilos para o site da Política de Privacidade e Segurança do Aplicativo
+ */
+
+/* === VARIÁVEIS DE COR E TIPOGRAFIA === */
+:root {
+    /* Cores */
+    --primary-color: #007BFF; /* Azul principal para links e destaques */
+    --secondary-color: #4CAF50; /* Verde para botões de sucesso/destaque (se houver) */
+    --text-dark: #333; /* Texto principal escuro */
+    --text-light: #555; /* Texto secundário */
+    --background-light: #f4f4f9; /* Fundo geral claro */
+    --card-background: #ffffff; /* Fundo de containers/cartões */
+    --border-color: #ddd; /* Cor das bordas e divisores */
+    
+    /* Tipografia */
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-size-base: 16px;
+}
+
+/* === RESET BÁSICO E ESTILOS GERAIS === */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    text-align: center;
 }
 
-header {
-    background: #007bff;
-    color: #fff;
-    padding: 20px 0;
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav {
-    margin-bottom: 30px;
-}
-
-nav a {
-    display: inline-block;
-    color: #007bff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-    margin: 0 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Conteúdo interno deve ser alinhado à esquerda */
 }
 
+/* === LAYOUT E CONTAINER PRINCIPAL === */
 .content-container {
-    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.app-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.back-link {
-    display: block;
-    margin-top: 20px;
+/* === CABEÇALHO E RODAPÉ === */
+header {
     text-align: center;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: white;
+    margin: -30px -30px 30px -30px; /* Extende para as bordas do content-container */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 300;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    color: #777;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-light);
     font-size: 0.9em;
 }
+
+/* === TIPOGRAFIA E TÍTULOS === */
+h2 {
+    color: var(--text-dark);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: var(--text-dark);
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* === LISTAS === */
+ul {
+    margin: 10px 0 20px 20px;
+    padding-left: 15px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* === LINKS E DESTAQUES === */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Um azul um pouco mais escuro no hover */
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* === SEPARADOR E NOTAS === */
+hr {
+    border:
